@@ -3,7 +3,7 @@ import './index.css'
 
 const MatchCard = props => {
   const {matchcardDetails} = props
-  console.log('matchcard', matchcardDetails, props)
+  // console.log('matchcard', matchcardDetails, props)
 
   let umpires
   let result

@@ -1,0 +1,9 @@
+.pie-chart-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.pie-chart-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}

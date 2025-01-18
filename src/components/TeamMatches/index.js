@@ -1,8 +1,10 @@
 // Write your code here
 import {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
+import PieCHartComponent from '../PieCHartComponent'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
@@ -58,15 +60,20 @@ class TeamMatches extends Component {
     this.setState({teamMatchList: UpdatedData, isLoading: false})
   }
 
+  onClickBackBtn = () => {
+    const {history} = this.props // Access history from props
+    history.push('/') // Navigate to the Home route
+  }
+
   render() {
     const {teamMatchList, isLoading} = this.state
     const {teamBannerUrl, latestMatchDetails, recentMatches} = teamMatchList
-    console.log(
-      'temabannerul & latestMatchDetails',
-      teamBannerUrl,
-      latestMatchDetails,
-      recentMatches,
-    )
+    // console.log(
+    //   'temabannerul & latestMatchDetails',
+    //   teamBannerUrl,
+    //   latestMatchDetails,
+    //   recentMatches,
+    // )
     return (
       <>
         {isLoading ? (
@@ -75,9 +82,19 @@ class TeamMatches extends Component {
           </div>
         ) : (
           <div className="bg_containerteamMatch">
+            <div className="backBtnCOntainer">
+              <button
+                className="backBtn"
+                type="button"
+                onClick={this.onClickBackBtn}
+              >
+                Back
+              </button>
+            </div>
             <div className="content_container">
               <img src={teamBannerUrl} className="head_img" alt="team banner" />
             </div>
+            <PieCHartComponent teamMatchList={teamMatchList} />
             <div className="latestMatch_container">
               <p className="latestMatch_heading">Latest Matches</p>
               <ul>
@@ -100,4 +117,4 @@ class TeamMatches extends Component {
   }
 }
 
-export default TeamMatches
+export default withRouter(TeamMatches)
