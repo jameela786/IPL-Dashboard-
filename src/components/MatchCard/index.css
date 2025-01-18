@@ -1,0 +1,60 @@
+/* Write your CSS here */
+* {
+  box-sizing: border-box;
+}
+.card_container {
+  background-color: #1e293b;
+  width: 18vw;
+  height: auto;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: Bree Serif;
+}
+
+.logo_img {
+  width: 50vw;
+  height: auto;
+}
+
+.main_head {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sub_head {
+  font-size: 1rem;
+  text-align: center;
+}
+.status_won {
+  font-size: 1.1rem;
+  color: #18ed66;
+  font-weight: bold;
+}
+
+.status_lose {
+  font-size: 1.1rem;
+  color: #e31a1a;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .main_head {
+    font-size: 0.5rem;
+  }
+  .sub_head {
+    font-size: 0.5rem;
+  }
+  .status_won {
+    font-size: 0.5rem;
+  }
+
+  .status_lose {
+    font-size: 0.5rem;
+  }
+}

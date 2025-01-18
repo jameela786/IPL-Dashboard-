@@ -1,0 +1,13 @@
+/* Write your CSS here */
+.notfound_container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_notfound {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}

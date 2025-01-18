@@ -1,0 +1,43 @@
+/* Write your CSS here */
+.eachcard_container {
+  width: 30vw;
+  height: 20vh;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffffff33;
+  background-color: #ffffff33;
+  border-radius: 15px;
+  font-family: Bree Serif;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.teamcard_img {
+  width: 100px;
+  height: auto;
+}
+
+.eachcard_btn {
+  background-color: transparent;
+  border: 0px solid;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 576px) {
+  .eachcard_container {
+    width: 30vw;
+    height: auto;
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+  .teamcard_img {
+    width: 60px;
+    height: auto;
+  }
+  .team_text {
+    font-size: 0.8rem;
+  }
+}
